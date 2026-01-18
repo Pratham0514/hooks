@@ -3,23 +3,20 @@ import './Home.css'
 
 function Emojicomp({ setEmoji }) {
   return (
-    <div>
-      <button className="color" onClick={() => setEmoji('🤗')}>🤗</button>
-      <button className="color" onClick={() => setEmoji('🤔')}>🤔</button>
-      <button className="color" onClick={() => setEmoji('🤐')}>🤐</button>
-      <button className="color" onClick={() => setEmoji('🤨')}>🤨</button>
-      <button className="color" onClick={() => setEmoji('😐')}>😐</button>
-      <button className="color" onClick={() => setEmoji('😑')}>😑</button>
-      <button className="color" onClick={() => setEmoji('😶')}>😶</button>
-      <button className="color" onClick={() => setEmoji('😏')}>😏</button>
-      <button className="color" onClick={() => setEmoji('😒')}>😒</button>
-      <button className="color" onClick={() => setEmoji('🙄')}>🙄</button>
-      <button className="color" onClick={() => setEmoji('😬')}>😬</button>
-      <button className="color" onClick={() => setEmoji('🤥')}>🤥</button>
-      <button className="color" onClick={() => setEmoji('😌')}>😌</button>
-      <button className="color" onClick={() => setEmoji('😔')}>😔</button>
-      <button className="color" onClick={() => setEmoji('😪')}>😪</button>
-      <button className="color" onClick={() => setEmoji('🤤')}>🤤</button>
+    <div >
+     <button className="Emoji" onClick={() => setEmoji('✈️')}>✈️</button>
+<button className="Emoji" onClick={() => setEmoji('🧳')}>🧳</button>
+<button className="Emoji" onClick={() => setEmoji('🌍')}>🌍</button>
+<button className="Emoji" onClick={() => setEmoji('🗺️')}>🗺️</button>
+<button className="Emoji" onClick={() => setEmoji('🏖️')}>🏖️</button>
+<button className="Emoji" onClick={() => setEmoji('🏔️')}>🏔️</button>
+<button className="Emoji" onClick={() => setEmoji('🏕️')}>🏕️</button>
+<button className="Emoji" onClick={() => setEmoji('🚗')}>🚗</button>
+<button className="Emoji" onClick={() => setEmoji('🚆')}>🚆</button>
+<button className="Emoji" onClick={() => setEmoji('🚢')}>🚢</button>
+<button className="Emoji" onClick={() => setEmoji('📸')}>📸</button>
+<button className="Emoji" onClick={() => setEmoji('🌄')}>🌄</button>
+
     </div>
   )
 }
