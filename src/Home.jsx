@@ -7,6 +7,7 @@ function Home() {
   const [emoji, setEmoji] = useState('🤗')
   const [raange, setRaange] = useState(50)
   const [backEmoji, setBackEmoji] = useState('#e44343')
+  const [rotate, setRotate] = useState(0)
 
   return (
     <>
@@ -17,35 +18,59 @@ function Home() {
 
       <div className="box-wrapper">
 
-  <div className="Emoji-Container1">
-    <Emojicomp setEmoji={setEmoji} />
-  </div>
+        {/* LEFT */}
+        <div className="Emoji-Container1">
+          <Emojicomp setEmoji={setEmoji} />
+        </div>
 
-  {/* CENTER */}
-  <div className="center-box">
-    <div
-      className="Emoji-Container"
-      style={{ fontSize: `${raange}px`, backgroundColor: backEmoji }}
-    >
-      {emoji}
-    </div>
+        {/* CENTER */}
+        <div className="center-box">
+          <div
+            className="Emoji-Container"
+            style={{
+              fontSize: `${raange}px`,
+              backgroundColor: backEmoji,
+              transform: `rotate(${rotate}deg)`,
+              transition: "0.3s ease"
+            }}
+          >
+            {emoji}
+          </div>
 
-    <input
-      type="range"
-      min="1"
-      max="100"
-      value={raange}
-      onChange={(e) => setRaange(e.target.value)}
-      className='slider'
-    />
-  </div>
+          {/* Size Slider */}
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value={raange}
+            onChange={(e) => setRaange(Number(e.target.value))}
+            className='slider'
+          />
 
-  {/* RIGHT */}
-  <div className="Emoji-Container2">
-    <Buttoncomp setBackEmoji={setBackEmoji} />
-  </div>
+          <br /><br />
+            <div class="button-container">
+            {/* Rotate Button */}
+          <button onClick={() => setRotate(prev => (prev + 90) % 360)} className='rotate'>
+            Rotate 90°
+          </button>
 
-</div>
+          <br /><br />
+
+          {/* Reset Button */}
+          <button onClick={() => setRotate(0)} className='rotate-reset'>
+            Reset
+          </button>
+
+            </div>
+          
+        </div>
+
+        {/* RIGHT */}
+        <div className="Emoji-Container2">
+          <Buttoncomp setBackEmoji={setBackEmoji} />
+        </div>
+
+      </div>
     </>
   )
 }
